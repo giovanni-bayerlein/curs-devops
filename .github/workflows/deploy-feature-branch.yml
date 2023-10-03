@@ -8,3 +8,12 @@ on:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
+
+jobs:
+  tests:
+    name: Test and Lint Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Lint Check
+        run: npx lint

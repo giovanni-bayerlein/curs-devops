@@ -4,6 +4,7 @@ on:
   push:
     branches-ignore:
       - main
+      - staging
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
